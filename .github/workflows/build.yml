@@ -5,8 +5,6 @@ jobs:
   build:
     strategy:
       matrix:
-        os: [windows-latest]
-    runs-on: ${{ matrix.os }}
+        image: ['alpine:3.8']
     steps:
-      - uses: actions/checkout@v1
-      - run: ./scripts/hello.sh
+      - uses: docker://${{ matrix.image }}
