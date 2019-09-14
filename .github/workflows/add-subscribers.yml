@@ -1,5 +1,7 @@
 name: Add Subscribers
-on: issues.labeled
+on:
+  issues:
+    types: [opened, labeled, unlabeled]
 
 jobs:
   add_subscribers:
