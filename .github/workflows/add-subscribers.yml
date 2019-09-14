@@ -1,0 +1,11 @@
+name: Add Subscribers
+on: issues.labeled
+
+jobs:
+  add_subscribers:
+    runs-on: ubunutu-latest
+    name: CC folks
+    steps:
+      - uses: zpao/manage-issue-subscribers@master
+        with:
+          repo-token: { { secrets.GITHUB_TOKEN } }
