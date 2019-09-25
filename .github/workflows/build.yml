@@ -10,4 +10,5 @@ jobs:
       - run: echo $GITHUB_SHA
       - run: echo $GITHUB_HEAD_REF
       - run: echo $GITHUB_BASE_REF
+      - run: echo $GITHUB_REF
       - run: cat $GITHUB_EVENT_PATH
